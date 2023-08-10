@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<style>.container {
+margin-top:20px;
+  margin-bottom:20px;
+  width:1100px;
+  float:center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 28px;
+
+
+
+}
+</style>
+<div style="background-color:rgb(242, 65, 65);padding:15px;color:white">
+        <table width="1000" align="center">
+    <tr><th><b>CONTACT?</b></th>
+    </tr>
+</table>
+    </div><br><br><div class="container">
+<table width="1000" align="center">
+
+
+<th><th>    <table width="300" style="border:1px groove" background-color: #D6EEEE;>
+        <tr>
+        <td><h4>ADDRESS</h4><h6>3AM ENTERPRISE<br>Kannur<br>670594</h6></td>
+        </tr></table><br>
+
+                <table width="300" style="border:1px groove">
+        <tr>
+        <td><h4>BUSSINESS HOUR</h4><h6>Mon-Sat<br>10-04pm<br>Lunch:1-1:45<br>Sun Close</h6></td>
+        </tr>
+
+                </table><br>
+<table width="300" style="border:1px groove">
+        <tr>
+        <td><h4>TELEPHONE</h4><h6>ashak-9745179901<br>megha-7736837250<br>abhiram-9778312899<br>akshay-9656804498</h6></td>
+        </tr>
+
+                </table></th>
+
+<th>
+<table width="700" align="center" class="ml-5" >
+    <tr>
+    <th><form action="" method="post">
+        {% csrf_token %}
+        <center></center><br><br>
+    NAME<BR >
+    <input type="text" name="name" style="HEIGHT:30PX;width:700px" margin-right="20px">
+        Email<br>
+    <input type="email" name="email"  style="HEIGHT:30PX;width:700px">
+        PHONE<br>
+    <input type="text" name="phone"  style="HEIGHT:30PX;width:700px">
+        Message<br>
+        <textarea name="message"  style="HEIGHT:30PX;width:700px"></textarea>
+    <br><br>
+        <b><br><br><center><b><input type="submit" placeholder="SUBMIT" style="HEIGHT:40PX;width:100px"></b></center>
+</b>
+    <BR>
+    </form></center></th>
+    </tr>
+
+</table>
+</th></tr></table>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'base3.html' %} {% load static %} {% block body %}
+<div style="background-color: rgb(242, 65, 65); padding: 15px">
+  <table width="1000" align="center">
+    <tr>
+      <th style="color: white"><b>Student Dashboard</b></th>
+    </tr>
+  </table>
+</div>
+
+<style>
+  .button {
+    background-color: rgb(37, 24, 46);
+    border: 1px solid red;
+    color: greenyellow;
+    padding: 40px;
+    text-align: center;
+    text-decoration: burlywood;
+    display: inline-block;
+    font-size: 15px;
+    margin: 15px 25px;
+    cursor: pointer;
+    width: 140px;
+  }
+
+  .button1 {
+    border-radius: 100%;
+  }
+</style>
+
+<div style="padding: 70px">
+  <table width="800" align="center">
+    <tr>
+      <center>
+        <th style="border: 1px solid black; padding: 5px">
+          <a href="{% url 'courselist' %}"
+            ><button class="button button1">Course<br />List</button></a
+          >
+        </th>
+        <th style="border: 1px solid black">
+          <a href="{% url 'myaccountstudent' request.user.id %}"
+            ><button class="button button1">My<br />Account</button></a
+          >
+        </th>
+        <th style="border: 1px solid black">
+          <a href="{% url 'myresult'  request.user.id %}"
+            ><button class="button button1">My<br />Result</button></a
+          >
+        </th>
+        <th style="border: 1px solid black">
+          <a href="{% url 'changepassword2' request.user.id %}"
+            ><button class="button button1">Change<br />Password</button></a
+          >
+        </th>
+        <th style="border: 1px solid black">
+          <a href="{% url 'logout' %}"
+            ><button class="button button1" style="height: 115px">
+              Logout
+            </button></a
+          >
+        </th>
+      </center>
+    </tr>
+  </table>
+</div>
+
+{% endblock %}

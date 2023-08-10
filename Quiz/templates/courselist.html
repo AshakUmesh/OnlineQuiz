@@ -1,0 +1,49 @@
+{% extends 'base3.html' %}
+{% load static %}
+{% block body %}
+<style>
+    .button1{
+    background-color:rgb(37, 24, 46) ;
+    color:rgb(145, 179, 95);
+    border-color:white;
+    }
+
+    #myTable{border-color:black;}
+</style>
+<div style="background-color:rgb(242, 65, 65);padding:15px">
+        <table width="1000" align="center">
+    <tr><th style="color:white"><b>COURSE DETAILS</b></th>
+    </tr>
+</table>
+</div>
+<div class="container" style="padding:20px;border:0px solid rgb(37, 24, 46)">
+<table class="table table-bordered" id="myTable" style="border:0px solid white">
+  <thead style="background-color:rgb(37, 24, 46);color:wheat;border-color:wheat">
+  <tr>
+    <th>Se_No.</th>
+    <th>Course Name</th>
+       <th>Course Description</th>
+    <th>Action</th>
+
+  </tr>
+  </thead>
+   <tbody style="border-color:black">
+
+    {% for i in topicdetail %}
+
+  <tr>
+
+    <td>{{forloop.counter}}</td>
+    <td>{{i.course_name}}</td>
+      <td>{{i.description}}</td>
+    <td><a href="{% url 'viewtopic' i.id %}"><button class="button button1">View Topic</button></a>
+
+  </tr>
+
+    {% endfor %}
+    </tbody>
+
+</table>
+
+</div>
+{% endblock %}
